@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Rachel Mungo</title>
+  <title>Portfolio | Rachel Mungo</title>
 
+  <!-- Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,149 +19,207 @@
 
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <h2>Rachel<span>.</span></h2>
-
-    <ul>
-      <li><a href="#" class="active">Accueil</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="#" class="logo">Rachel<span>.</span></a>
+      <ul>
+        <li><a href="#" class="nav-link active">Accueil</a></li>
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-
+  <!-- Section Hero -->
   <section class="hero">
-
     <div class="hero-text">
       <h4>HELLO !</h4>
-
-      <h1>
-        Je suis <span>Rachel Mungo</span>
-      </h1>
-
-      <h3 class="dynamic-txt-box">Je suis <span id="changing-text"></span></h3>
-
+      <h1>Je suis <span>Rachel Mungo</span></h1>
+      <h3 class="dynamic-txt-box">Développeuse <span id="changing-text"></span></h3>
       <p>
-        Jeune professionnelle passionnée par le développement web,
-        spécialisée en HTML, CSS et JavaScript avec des compétences
-        en applications modernes et bases de données.
+        Je fais la conception des applications web modernes, performantes et centrées sur l'utilisateur. 
+        Spécialisée en ingénierie Full-Stack, j'allie la rigueur de la gestion informatique 
+        à la création d'interfaces modernes et de bases de données robustes.
       </p>
-
       <div class="hero-action">
-
-        <a href="#contact" class="btn">
-          Contactez-moi
-        </a>
-
-        <div class="socials">
-
-          <a href="https://github.com/rachelmungo" target="_blank">
-            GitHub
-          </a>
-
-          <a href="#" target="_blank">
-            LinkedIn
-          </a>
-
-        </div>
-
+        <a href="#contact" class="btn">Me contacter</a>
+        <a href="#projects" class="btn btn-secondary">Voir mes projets</a>
       </div>
     </div>
-
     <div class="hero-img">
-      <img src="./unnamed.jpg" alt="Rachel Mungo">
+      <img src="./unnamed (28).jpg" alt="Rachel Mungo">
     </div>
-
   </section>
 
-
+  <!-- Section À Propos & Expériences -->
   <section id="about" class="about">
-
-    <h2>About <span>Me</span></h2>
-
+    <div class="section-header">
+      <h2>A little about <span>me</span></h2>
+    </div>
+    
     <div class="about-container">
+      <div class="about-profile">
+        <img src="./unnamed (28).jpg" alt="Rachel Mungo">
+        <div class="about-text">
+          <h3>Ingénieure Logiciel Full-Stack</h3>
+          <p>
+            Diplômée en Informatique Appliquée à la Gestion, j'évolue en tant que 
+            Développeuse Full-Stack. Mon quotidien consiste à concevoir l'architecture back-end 
+            tout en soignant l'expérience utilisateur (UI/UX) sur le front-end. Passionnée par l'écosystème web, 
+            je transforme des besoins complexes en solutions logicielles fluides.
+          </p>
+          <a href="./cv-rachel-mungo.pdf" download class="btn">
+            <i class="fa-solid fa-download"></i> Télécharger mon CV
+          </a>
+        </div>
+      </div>
 
-      <img src="./unnamed.jpg" alt="Rachel Mungo">
+      <!-- Grille des technologies -->
+      <div class="tech-section">
+        <h3>Technologies avec lesquelles je travaille</h3>
+        <div class="tech-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3 / SASS</span>
+          <span class="tag">JavaScript (ES6+)</span>
+          <span class="tag">React.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">SQL / PostgreSQL</span>
+          <span class="tag">UI/UX Design</span>
+          <span class="tag">Git & GitHub</span>
+        </div>
+      </div>
 
-      <div class="about-text">
+      <!-- Section Expériences Professionnelles -->
+      <div class="experience-section">
+        <h3>Parcours & Expérience</h3>
+        
+        <div class="exp-timeline">
+          <!-- Expérience 1 : Afrix Global -->
+          <div class="exp-item">
+            <div class="exp-meta">
+              <h4>Développeuse Full-Stack</h4>
+              <p class="company">Afrix Global</p>
+              <ul class="exp-details">
+                <li>UI/UX Design : conception des applications web modernes</li>
+                <li>Développement Full Stack : Conception (Front)</li>
+              </ul>
+            </div>
+            <div class="exp-date">2026</div>
+          </div>
 
-        <h3>Développeuse Web Full-Stack</h3>
+          <!-- Expérience 2 : DUSSOFT CONGO -->
+          <div class="exp-item">
+            <div class="exp-meta">
+              <h4>Développeuse Full-Stack</h4>
+              <p class="company">DUSSOFT CONGO</p>
+              <ul class="exp-details">
+                <li>UI/UX Design : conception des applications web modernes</li>
+                <li>Développement Full Stack : Conception (Front)</li>
+              </ul>
+            </div>
+            <div class="exp-date">2025</div>
+          </div>
 
-        <p>
-          Développeuse Full Stack chez Afrix Global.
-          Diplômée en informatique appliquée à la gestion.
-          Expérience en analyse de données, UI/UX et développement web.
-        </p>
-
-        <a href="./cv-rachel-mungo.pdf" download class="btn">
-          Télécharger CV
-        </a>
-
+          <!-- Cursus -->
+          <div class="exp-item">
+            <div class="exp-meta">
+              <h4>Cursus Académique</h4>
+              <p class="company">Graduée en Informatique Appliquée à la Gestion</p>
+            </div>
+            <div class="exp-date">Diplômée</div>
+          </div>
+        </div>
       </div>
 
     </div>
-
   </section>
 
-
-  <section id="skills" class="skills">
-
-    <h2>My <span>Skills</span></h2>
-
-    <div class="skills-container">
-
-      <div class="skill">
-        <p>HTML</p>
-        <div class="bar">
-          <span data-width="90%" style="width: 0%;"></span>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>CSS</p>
-        <div class="bar">
-          <span data-width="80%" style="width: 0%;"></span>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>JavaScript</p>
-        <div class="bar">
-          <span data-width="75%" style="width: 0%;"></span>
-        </div>
-      </div>
-
-      <div class="skill">
-        <p>React</p>
-        <div class="bar">
-          <span data-width="70%" style="width: 0%;"></span>
-        </div>
-      </div>
-
+  <!-- Section Projets -->
+  <section id="projects" class="projects">
+    <div class="section-header">
+      <h2>Selected <span>work</span></h2>
     </div>
 
+    <div class="projects-grid">
+      <!-- Projet 1 : Weather App -->
+      <div class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Weather App</h3>
+            <span class="project-year">2026</span>
+          </div>
+          <p>Une application web simple et intuitive pour consulter la météo en temps réel via l'intégration d'une API publique.</p>
+          <div class="project-tech">
+            <span>JavaScript</span>
+            <span>API Rest</span>
+            <span>HTML5 / CSS3</span>
+          </div>
+          <a href="https://github.com/rachelmungo/weather" target="_blank" class="project-link">Code Source <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Projet 2 : Sunnyside -->
+      <div class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Sunnyside Landing Page</h3>
+            <span class="project-year">2025</span>
+          </div>
+          <p>Intégration d'une landing page moderne et entièrement responsive, axée sur la précision du design (Pixel Perfect) et des animations fluides.</p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3 / SASS</span>
+            <span>Flexbox / Grid</span>
+          </div>
+          <a href="https://github.com/rachelmungo/sunnyside" target="_blank" class="project-link">Code Source <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
   </section>
 
-
+  <!-- Section Contact -->
   <section id="contact" class="contact">
+    <div class="section-header">
+      <h2>Let's work <span>together</span></h2>
+    </div>
+    <p class="contact-subtitle">Actuellement ouverte aux opportunités et projets innovants. N'hésitez pas à me joindre.</p>
 
-    <h2><span>Contact</span> Me</h2>
-
-    <div class="contact-info">
-
-      <p><i class="fa-solid fa-circle-dot"></i> Goma, RDC</p>
-
-      <p><i class="fa-solid fa-phone"></i> +243 999 157 323</p>
-
-      <p><i class="fa-solid fa-envelope"></i> rachelmungo41@gmail.com</p>
-
+    <div class="contact-container">
+      <div class="contact-links">
+        <!-- Tuile Email -->
+        <a href="mailto:rachelmungo41@gmail.com" class="contact-tile">
+          <span class="tile-label">Email</span>
+          <span class="tile-value">rachelmungo41@gmail.com <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        
+        <!-- Tuile LinkedIn -->
+        <a href="https://linkedin.com/in/rachelmungo" target="_blank" class="contact-tile">
+          <span class="tile-label">LinkedIn</span>
+          <span class="tile-value">linkedin.com/in/rachelmungo <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        
+        <!-- Tuile GitHub -->
+        <a href="https://github.com/rachelmungo" target="_blank" class="contact-tile">
+          <span class="tile-label">GitHub</span>
+          <span class="tile-value">github.com/rachelmungo <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        
+        <!-- Tuile Localisation & Tel -->
+        <div class="contact-tile no-link">
+          <span class="tile-label">Localisation & Tel</span>
+          <span class="tile-value"><i class="fa-solid fa-location-dot"></i> Goma, RDC &nbsp;|&nbsp; <i class="fa-solid fa-phone"></i> +243 999 157 323</span>
+        </div>
+      </div>
     </div>
 
+    <footer>
+      <p>&copy; 2026 Rachel Mungo. Tous droits réservés.</p>
+    </footer>
   </section>
 
   <script src="script.js"></script>
 
 </body>
-
 </html>

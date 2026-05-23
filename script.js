@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   
   // 1. ANIMATION DE TEXTE DYNAMIQUE (TYPING EFFECT)
-  const words = ["Développeuse Web Full-Stack", "Passionnée de Gestion IT", "Créatrice d'Applications Desktop"];
+  const words = ["Full-Stack", "Passionnée IT", "UI/UX Designer"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let typeSpeed = isDeleting ? 40 : 80;
 
     if (!isDeleting && charIndex === currentWord.length) {
-      typeSpeed = 1800; // Pause quand le mot est complet
+      typeSpeed = 1800; 
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       wordIndex = (wordIndex + 1) % words.length;
-      typeSpeed = 400; // Pause avant le mot suivant
+      typeSpeed = 300; 
     }
 
     setTimeout(typeEffect, typeSpeed);
@@ -34,40 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (textElement) typeEffect();
 
-
-  // 2. ANIMATION DES BARRES DE COMPÉTENCES AU SCROLL
-  const skillBars = document.querySelectorAll(".bar span");
-  
-  const skillsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const bar = entry.target;
-        const targetWidth = bar.getAttribute("data-width");
-        
-        bar.style.width = targetWidth;
-        bar.style.transition = "width 1.5s cubic-bezier(0.1, 1, 0.1, 1)";
-        
-        skillsObserver.unobserve(bar); 
-      }
-    });
-  }, { threshold: 0.2 });
-
-  skillBars.forEach(bar => skillsObserver.observe(bar));
-
-
-  // 3. MENU DE NAVIGATION ACTIF AU SCROLL
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav ul li a");
+  // 2. NAVIGATION ACTIVE AU SCROLL
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
 
   window.addEventListener("scroll", () => {
     let currentSectionId = "";
-    
+    const scrollY = window.pageYOffset;
+
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      
-      if (window.pageYOffset >= (sectionTop - sectionHeight / 3)) {
-        currentSectionId = section.getAttribute("id");
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        currentSectionId = sectionId;
       }
     });
 
