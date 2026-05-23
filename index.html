@@ -7,6 +7,11 @@
   <title>Portfolio Rachel Mungo</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +21,7 @@
     <h2>Rachel<span>.</span></h2>
 
     <ul>
-      <li><a href="#">Accueil</a></li>
+      <li><a href="#" class="active">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#skills">Compétences</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -33,7 +38,7 @@
         Je suis <span>Rachel Mungo</span>
       </h1>
 
-      <h3>Développeuse Web Full-Stack</h3>
+      <h3 class="dynamic-txt-box">Je suis <span id="changing-text"></span></h3>
 
       <p>
         Jeune professionnelle passionnée par le développement web,
@@ -62,13 +67,11 @@
       </div>
     </div>
 
-
     <div class="hero-img">
       <img src="./unnamed.jpg" alt="Rachel Mungo">
     </div>
 
   </section>
-
 
 
   <section id="about" class="about">
@@ -84,7 +87,7 @@
         <h3>Développeuse Web Full-Stack</h3>
 
         <p>
-          Developpeuse Full Stack chez Afrix Global.
+          Développeuse Full Stack chez Afrix Global.
           Diplômée en informatique appliquée à la gestion.
           Expérience en analyse de données, UI/UX et développement web.
         </p>
@@ -100,7 +103,6 @@
   </section>
 
 
-
   <section id="skills" class="skills">
 
     <h2>My <span>Skills</span></h2>
@@ -109,40 +111,35 @@
 
       <div class="skill">
         <p>HTML</p>
-
         <div class="bar">
-          <span style="width:90%"></span>
+          <span data-width="90%" style="width: 0%;"></span>
         </div>
       </div>
 
       <div class="skill">
         <p>CSS</p>
-
         <div class="bar">
-          <span style="width:80%"></span>
+          <span data-width="80%" style="width: 0%;"></span>
         </div>
       </div>
 
       <div class="skill">
         <p>JavaScript</p>
-
         <div class="bar">
-          <span style="width:75%"></span>
+          <span data-width="75%" style="width: 0%;"></span>
         </div>
       </div>
 
       <div class="skill">
         <p>React</p>
-
         <div class="bar">
-          <span style="width:70%"></span>
+          <span data-width="70%" style="width: 0%;"></span>
         </div>
       </div>
 
     </div>
 
   </section>
-
 
 
   <section id="contact" class="contact">
@@ -160,6 +157,8 @@
     </div>
 
   </section>
+
+  <script src="script.js"></script>
 
 </body>
 

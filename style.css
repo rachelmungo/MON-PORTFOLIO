@@ -1,8 +1,12 @@
+/* ==========================================================================
+   STYLES GÉNÉRAUX 
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -12,10 +16,12 @@ body {
 }
 
 span {
-  color: #3205d3; /* Orange plus moderne et vibrant */
+  color: #3205d3; 
 }
 
-/* NAV */
+/* ==========================================================================
+   INTERFACE NAVIGATION 
+   ========================================================================== */
 nav {
   display: flex;
   justify-content: space-between;
@@ -29,8 +35,9 @@ nav {
 }
 
 nav h2 {
-  font-size: 1.5rem;
+  font-size: 1.35rem; 
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 nav ul {
@@ -43,76 +50,94 @@ nav ul li {
 }
 
 nav a {
-  color: #dddddd;
+  color: #888888; 
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   transition: 0.3s ease;
+  padding-bottom: 5px;
 }
 
 nav a:hover {
-  color: #3205d3;
+  color: #ffffff;
 }
 
-/* HERO */
+nav a.active {
+  color: #ffffff; 
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   SECTION HERO 
+   ========================================================================== */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 100px 8%;
   min-height: 85vh;
+  gap: 40px; /* Évite que l'image et le texte se collent */
 }
 
 .hero-text {
-  max-width: 600px;
+  max-width: 650px; 
 }
 
 .hero-text h4 {
   color: #3205d3;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+  font-size: 1.8rem;       
+  font-weight: 800;         
+  letter-spacing: 2px;      
+  margin-bottom: 20px;      
+  display: inline-block;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
+  font-size: 4.8rem; 
+  font-weight: 800;
+  letter-spacing: -2px; 
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 .hero-text h3 {
-  font-size: 1.8rem;
-  margin: 15px 0;
-  font-weight: 500;
+  font-size: 2.8rem; 
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 15px 0 25px 0;
+  min-height: 60px; 
 }
 
 .hero-text p {
-  margin-bottom: 35px;
-  line-height: 1.8;
-  color: #ccc;
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  color: #999999; 
 }
 
-/* Boutons et Réseaux Sociaux */
+/* BOUTONS ET ACTIONS */
 .hero-action {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .btn {
   background: #3205d3;
-  color: black;
-  padding: 12px 28px;
+  color: white;
+  padding: 14px 32px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 600; 
   transition: 0.3s ease;
   display: inline-block;
-  box-shadow: 0 4px 15px rgba(227, 231, 250, 0.4);
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(227, 231, 250, 0.4);
+  transform: translateY(-2px);
 }
 
 .socials {
@@ -121,15 +146,20 @@ nav a:hover {
 }
 
 .socials a {
-  color: #3205d3;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 0.95rem;
   font-weight: 500;
+  padding: 12px 24px;
+  border: 1px solid #333; 
+  border-radius: 30px;
   transition: 0.3s;
 }
 
 .socials a:hover {
-  text-decoration: underline;
-  transform: scale(1.05);
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
 }
 
 .hero-img img {
@@ -138,10 +168,11 @@ nav a:hover {
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #3205d3;
-  box-shadow: 0 0 40px rgba(227, 231, 250, 0.4);
 }
 
-/* ABOUT */
+/* ==========================================================================
+   SECTION À PROPOS (ABOUT) 
+   ========================================================================== */
 .about {
   padding: 100px 8%;
   background: #111111;
@@ -149,7 +180,9 @@ nav a:hover {
 }
 
 .about h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
   margin-bottom: 50px;
 }
 
@@ -172,24 +205,31 @@ nav a:hover {
 }
 
 .about-text h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   margin-bottom: 20px;
 }
 
 .about-text p {
-  color: #ccc;
-  line-height: 1.8;
+  color: #999999;
+  font-size: 1.05rem;
+  line-height: 1.7;
   margin-bottom: 30px;
 }
 
-/* SKILLS */
+/* ==========================================================================
+   SECTION COMPÉTENCES (SKILLS) 
+   ========================================================================== */
 .skills {
   padding: 100px 8%;
   text-align: center;
 }
 
 .skills h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
   margin-bottom: 50px;
 }
 
@@ -204,7 +244,8 @@ nav a:hover {
 }
 
 .skill p {
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -220,11 +261,12 @@ nav a:hover {
   height: 100%;
   background: #3205d3;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(227, 231, 250, 0.4);
+  width: 0%; 
 }
 
-/* CONTACT */
-/* CONTACT */
+/* ==========================================================================
+   SECTION CONTACT 
+   ========================================================================== */
 .contact {
   padding: 100px 8%;
   background: #111111;
@@ -232,23 +274,135 @@ nav a:hover {
 }
 
 .contact h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
   margin-bottom: 30px;
 }
 
 .contact-info {
-  font-size: 1.2rem;
-  color: #ccc;
-  line-height: 2.5; /* Légèrement augmenté pour aérer */
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #999999;
+  line-height: 2.5;
   max-width: 400px;
   margin: 0 auto;
-  text-align: left; /* Aligne proprement les lignes de contact */
+  text-align: left;
 }
 
-/* Style spécifique pour vos nouvelles icônes */
 .contact-info p i {
-  color: #ffffff;      /* Force la couleur blanche pour les icônes */
-  margin-right: 15px;  /* Espace horizontal entre l'icône et le texte */
-  width: 25px;         /* Largeur fixe pour que tout soit parfaitement aligné verticalement */
+  color: #ffffff;
+  margin-right: 15px;
+  width: 25px;
   text-align: center;
+}
+
+/* STYLE DU CURSEUR D'ÉCRITURE CLIGNOTANT */
+#changing-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+  color: #3205d3;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (REND LE SITE RESPONSIVE)
+   ========================================================================== */
+
+/* Pour les tablettes et écrans intermédiaires (sous 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 5%;
+  }
+  .hero-text h1 {
+    font-size: 3.8rem;
+  }
+  .hero-text h3 {
+    font-size: 2.2rem;
+  }
+  .about-container {
+    gap: 40px;
+  }
+}
+
+/* Pour les mobiles (sous 768px) */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 5%;
+  }
+
+  /* Cache la liste de liens sur mobile pour éviter les chevauchements */
+  nav ul {
+    display: none; 
+  }
+
+  /* Hero : passe en colonne, l'image se place au-dessus du texte */
+  .hero {
+    flex-direction: column-reverse; 
+    text-align: center;
+    padding: 50px 5%;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .hero-img img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-text h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-text h3 {
+    font-size: 1.6rem;
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-action {
+    justify-content: center; /* Centre les boutons sur smartphone */
+  }
+
+  /* À Propos : passe en colonne et se centre */
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Ajustements généraux des titres de section sur mobile */
+  .about h2, .skills h2, .contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .skills, .contact {
+    padding: 60px 5%;
+  }
 }
